@@ -102,4 +102,3 @@ print(set3.isdisjoint(set2))   #asking are they completely different, get True o
 
 
 
-
