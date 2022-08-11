@@ -11,6 +11,7 @@ result: 70
 """
 list1 = [10, 20, 4]
 print(list1)
+
 #sort list
 list1.sort()
 print(list1)
