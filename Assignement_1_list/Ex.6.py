@@ -1,4 +1,4 @@
-########## NOT DONE
+########## DONE
 """
 count number of occurrences of x in the given list
 
