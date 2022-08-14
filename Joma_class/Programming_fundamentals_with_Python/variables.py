@@ -69,66 +69,19 @@ print("----------------code is at line 68----------------")
 
 def tip_amount(tip_percentage, total):
     print("The total is: " + str(total))
-    print("The tip % is" + str (tip_percentage * 100) + "%")
+    print("The tip % is " + str (tip_percentage * 100) + "%")
+    print("The tip amount will be: " + str(total * tip_percentage))
 
+tip_amount(0.15, 100)
 
+# can also do
 
+potato = 100
 
-
-
-print("----------------code is at line ----------------")
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
+tip_amount(0.15, potato)
 
 
 print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
-
-
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
-
-
-
-
-print("----------------code is at line ----------------")
-print("----------------code is at line ----------------")
-
-
 
 
 
