@@ -143,18 +143,66 @@ CLASS METHOD
 Class method:
     - called on class itself, not on an object instance
     - can only access your class variables
+    - takes the first argument as a class "cls"
     <<class>>.<<class_method>> 
 """
 
 class Student:
+    study_type = "remote"
     def __init__(self, name, age, cohort):
-        self.name = name # variables
-        self.age = age
-        self.cohort = cohort
-
+        self.name = name # variables, public by default
+        self.age = age # variable
+        self.cohort = cohort # variable, if do self.__cohort , makes it private
+        self.__speed = speed
     def print_std(self):
-        print(f"name: {self.name}\nage: {self.age}")
+        print(f"name: {self.name}\nage: {self.age}\nstudy_type: {self.study_type}")
+
+    def __myprivate_var(self):
+        print("I am private")
+
+    def get_speed (self):
+        return self.__speed
+
+    @classmethod # ät decorator basically a function within a function, because use @, cls method on next line
+    def set_study_type(cls, mode):
+        cls.study_type = mode
+
+    @staticmethod # example of static method, notes below
+    def is_weekend(day):
+        return day in [5,6]
+
+    @staticmethod # example of static method, notes below. used as helper class. (utility class) # utility method is a function that performs task
+    def sample_std():
+        print(f"name: sample\nage: sample age\nstudy type: mode")
+
 
 std1 = Student("name", 28, "DSI1")
+std1.print_std()
+
+Student.set_study_type("Hybrid")  #How call on this class method? class name.method (student is class, set_study_type is method)
+std1.print_std()
+
+# how calls this static method
+Student.sample_std() #either from object
+std1.sample_std() # or class
+
+"""
+static method:
+    - general utility methods that perform tasks in isolation
+    - don't take self or cls parameters
+    - they are bound to your class but not to the object of the class
+
+Access restrictions:
+private only accessible within the class
+public is accessible everywhere: within the class, inheritance, objects
+protected aldo but not so common?
 
 
+when use private vs public
+private would maybe be things that will change, computations in them
+e.g. speed private so ppl can't edit speed
+if want to get speed, will have method get_speed that returns speed
+"""
+
+car1.__speed = 500 # can modify value, to stop this happening, can make it private so ppl don't screw it up
+print(car1.return_speed)
