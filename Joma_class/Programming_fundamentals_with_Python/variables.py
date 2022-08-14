@@ -55,8 +55,8 @@ print("----------------code is at line 54----------------")
 
 def hello2(name):
     greet = "Hi! " + name
-    print(greet) # not an output, prints smth on screen
-    print("asdf") # that's why can print multiple things
+    print(greet) # not an output, prints smth on screen   # these are side effects, return is the output
+    print("asdf") # that's why can print multiple things  # these are side effects
     return 50 # can return something completely random
 
 hello2("Paul")
@@ -65,14 +65,17 @@ hello2("Paul")
 variable2 = hello2("sam")
 print(variable2)
 
+print("----------------code is at line 68----------------")
+
+def tip_amount(tip_percentage, total):
+    print("The total is: " + str(total))
+    print("The tip % is" + str (tip_percentage * 100) + "%")
 
 
 
 
 
 
-
-print("----------------code is at line ----------------")
 print("----------------code is at line ----------------")
 
 
