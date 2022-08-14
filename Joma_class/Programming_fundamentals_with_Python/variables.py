@@ -38,6 +38,32 @@ def hello(name):
 hello("Jonathan")
 hello("rabbit")
 
+def hello1(name):
+    greet = "Hi! " + name
+    print(greet) # not an output, prints smth on screen
+    print("asdf") # that's why can print multiple things
+    return name # return keyword means in your function what does it do, what does it return
+                # if have return statement, you define what outputting
+
+hello1("Jonson")
+
+# so if do the following, see what function returns
+variable1 = hello1("sam")
+print(variable1)
+
+print("----------------code is at line 54----------------")
+
+def hello2(name):
+    greet = "Hi! " + name
+    print(greet) # not an output, prints smth on screen
+    print("asdf") # that's why can print multiple things
+    return 50 # can return something completely random
+
+hello2("Paul")
+
+# so if do the following, see what function returns
+variable2 = hello2("sam")
+print(variable2)
 
 
 
@@ -46,6 +72,40 @@ hello("rabbit")
 
 
 
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
+
+
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
+
+
+
+
+
+
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
+
+
+
+
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
+
+
+
+
+
+
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
+
+
+
+
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
 
 
 
@@ -54,47 +114,21 @@ hello("rabbit")
 
 
 
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
 
 
 
 
 
 
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("----------------code is at line ----------------")
+print("----------------code is at line ----------------")
