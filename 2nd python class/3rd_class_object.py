@@ -68,6 +68,7 @@ most of which will have a special first argument: self.
 ○ attributes - variables of any type defined in the class body or in its constructor (__init__).
 """
 class Car:
+    accelerate = 15 # class variables use for e.g. if PMI doesn't change, in Europe 25, if use flag like -9999 in exercise above
     def __init__(self, name, num_doors=4, exotic = False):
         self.name = name
         self.door_no = num_doors
@@ -128,6 +129,32 @@ car2.drive()
 car2.acceleration(30)
 print(car1.speed)
 print(car2.speed)
-#speed is variable so no curly bracket? acceleration is a method
-#have modified acceleration for car 2, for car 1 zero?
+# speed is variable so no curly bracket? acceleration is a method
+# have modified acceleration for car 2, for car 1 zero?
+
+# declaring instance variables...missed her talk
+# class variables declared and shared between all instances
+# instance variable unique to each
+
+
+"""
+CLASS METHOD
+
+Class method:
+    - called on class itself, not on an object instance
+    - can only access your class variables
+    <<class>>.<<class_method>> 
+"""
+
+class Student:
+    def __init__(self, name, age, cohort):
+        self.name = name # variables
+        self.age = age
+        self.cohort = cohort
+
+    def print_std(self):
+        print(f"name: {self.name}\nage: {self.age}")
+
+std1 = Student("name", 28, "DSI1")
+
 
