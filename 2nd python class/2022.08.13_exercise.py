@@ -5,7 +5,7 @@ e.g .: 112 -> "one one two" 9973 -> "nine nine seven three"
 Hint: you need the input () function, a dictionary and a loop.
 """
 
-if __name__ == "__main__":
+if __name__ == "__main__":   # wrap into main if want it to run first
     numbers = {
         0: "zero",
         1: "one",

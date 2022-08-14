@@ -233,6 +233,11 @@ while True:
 # to create file use write or append
 f = open("test.txt", "a")
 
+
+# to remove error do this
+if os.path.exists(("test.txt")):
+    os.remove("test.txt   # cleaner way to write it. Can also add the writing part to it
+
 # be careful, write writes over your file? so append safer?
 f.write("Ohh, it is going to rain. \n The beautiful day is not for outdoor activities") # appending to file
 f.close()  # need to close file afterwards
@@ -240,7 +245,15 @@ f.close()  # need to close file afterwards
 with open("test.txt", "a") as f:
     f.write("\nI won't be able to cycle. \nI think I will paint")
 
+# remove file
+import os   #os library  os stands for operating system?
 
+os.remove("test.txt")  # after delete, need to create again to run from start and write into it
+os.remove("tests.txt")  # gives error if not exist
+
+# to remove error do this
+if os.path.exists(("tests.txt")):
+    os.remove("tests.txt")      # cleaner way to write it
 
 
 
