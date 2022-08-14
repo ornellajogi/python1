@@ -72,17 +72,62 @@ class Car:
         self.name = name
         self.door_no = num_doors
         self.is_exotic = exotic
-        self.in.motion = False
+        self.in_motion = False
+        self.speed = 0
 
-    def doors(self): #now giving methods. To modify attributes?
+    def get_doors(self): #now giving methods. To modify attributes?
         if self.door_no not in [2, 3, 4]:
             return f"{self.name} has invalid door numbers"
         return self.door_no
 
+    def drive(self):            #can have method call drive
+        self.in_motion = True # when start driving = true
 
+    def acceleration(self, acceleration= 10): # only speed up once in motion...weird logic
+        if self.in_motion:
+            self.speed += acceleration
+
+    def stop(self):
+        self.in_motion = False
+
+"""
+Constructor 
+● The __init__ special method is called by Python when creating a new class object. 
+● As the name suggests, it is used to initialize an object - for example, assigning initial values to attributes,
+establishing a database connection, or other activities that should only be performed once, 
+at the beginning of a new object's life. ● The __init__ method, like any other method, 
+takes self as its first argument. self, is a reference to a specific class object. 
+● Like other methods, __init__ can take additional parameters - in our case it is the 
+registration number of the created vehicle.
+"""
+
+"""
+Methods 
+● Note that methods often modify attributes object. 
+In our case, one method increases the speed and the other resets it. 
+● These methods take no arguments in addition to a reference to the current object (self). 
+However, nothing prevents them from accepting more arguments. 
+● It is similar with the return value - since our methods modify the internal state 
+of the object (speed) they don't need to return anything, but of course each method is 
+really a function and therefore can return a value using the return keyword.
+"""
+
+# CREATING OBJECTS
+
+car1 = Car(name="Toyota Prius", num_doors=4)
+car2 = Car(name="Tesla A20", num_doors=2, exotic=True)
+
+print(car1)
+print(car1.get_doors())
+print(car2.get_doors())
 
 # constructor is executed when class called
 # first thing executed, helps assign values to your properties at point of creation
 
-
+car2.drive()
+car2.acceleration(30)
+print(car1.speed)
+print(car2.speed)
+#speed is variable so no curly bracket? acceleration is a method
+#have modified acceleration for car 2, for car 1 zero?
 
