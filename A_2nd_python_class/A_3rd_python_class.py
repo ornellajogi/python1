@@ -1,4 +1,5 @@
 """
+SOLUTIONS: https://gitlab.com/smartsolutaris/pythonbasics/-/blob/ds_cohort/python%20intro/class_example.ipynb
 Q1
 given 2 strings, can you make first string from the second by deleting some characters
 s1 = "Hello"
